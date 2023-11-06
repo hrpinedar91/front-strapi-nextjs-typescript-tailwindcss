@@ -2,11 +2,11 @@ import React from "react";
 import { fetchApi } from "@/helpers/fetch-api";
 
 const getData = async () => {
-  const path = "/blog";
+  const path = "/posts";
   const urlParams = {
     populate: "*",
     sort: {
-      createAt: "asc",
+      createdAt: "asc",
     },
     pagination: {
       page: 1,
