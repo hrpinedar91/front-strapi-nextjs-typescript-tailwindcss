@@ -45,7 +45,7 @@ const Blog = async ({ searchParams }: Props) => {
 
   return (
     <div>
-      <PageHeader title="Blog" />
+      <PageHeader title="Ultimos Post" />
       <PagePagination pagination={pagination} />
       <div className="grid gap-4 mt-8">
         {data.map((post: Post) => (

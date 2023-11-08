@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
+import PageTransition from "@/components/PageTransition";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextTopLoader color="#000" />
-        <main className="comtainer mx-auto max-w-2xl">{children}</main>
+        <main className="comtainer mx-auto max-w-2xl">
+          <PageTransition>{children}</PageTransition>
+        </main>
       </body>
     </html>
   );
