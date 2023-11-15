@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
 import PageTransition from "@/components/PageTransition";
+import Header from "@/components/Header";
+import CartContextProvider from "@/context/CartContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <NextTopLoader color="#000" />
-        <main className="comtainer mx-auto max-w-2xl">
-          <PageTransition>{children}</PageTransition>
+        <main className="comtainer mx-28 pt-4">
+          <CartContextProvider>
+            <Header />
+            <PageTransition>{children}</PageTransition>
+          </CartContextProvider>
         </main>
       </body>
     </html>

@@ -44,7 +44,7 @@ const Blog = async ({ searchParams }: Props) => {
   console.log(page);
 
   return (
-    <div>
+    <div className="mx-auto max-w-2xl">
       <PageHeader title="Ultimos Post" />
       <PagePagination pagination={pagination} />
       <div className="grid gap-4 mt-8">
