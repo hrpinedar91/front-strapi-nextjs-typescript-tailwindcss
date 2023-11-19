@@ -41,7 +41,7 @@ const Header = () => {
   // const { totalQuantityProduct } = useContext(cartContext);
 
   return (
-    <Navbar fluid={true} rounded={true}>
+    <Navbar fluid={true} rounded={true} className="bg-[#f4f4f4]">
       <Navbar.Brand href="https://flowbite.com/">
         <Image
           priority // Change this line
