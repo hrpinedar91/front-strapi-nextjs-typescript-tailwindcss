@@ -6,6 +6,7 @@ import "./globals.css";
 import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import CartContextProvider from "@/context/CartContext";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,13 +22,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QV68NPHNXT"
+          />
+          <script>{`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QV68NPHNXT');
+`}</script>
+        </>
+      </head>
       <body className={inter.className}>
         <NextTopLoader color="#000" />
-        <main className="comtainer mx-28 pt-4">
+        <main className="comtainer md:mx-28 pt-4">
           <CartContextProvider>
             <Header />
             <PageTransition>{children}</PageTransition>
           </CartContextProvider>
+          <Toaster></Toaster>
         </main>
       </body>
     </html>
