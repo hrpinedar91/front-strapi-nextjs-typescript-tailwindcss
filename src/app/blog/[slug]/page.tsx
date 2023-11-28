@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { formatDate } from "@/helpers/format-date-helper";
 import PageHeader from "@/components/PageHeader";
+import { MDXRemote } from "next-mdx-remote/rsc";
 
 interface Props {
   params: {
@@ -49,7 +50,9 @@ const Slug = async ({ params }: Props) => {
       <p className="mb-3 text-gray-500 dark:text-gray-500 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-black first-letter:mr-3 first-letter:float-left">
         {description}
       </p>
-      <div className="prose">{body}</div>
+      <div className="prose">
+        <MDXRemote source={body}></MDXRemote>
+      </div>
     </div>
   );
 };
