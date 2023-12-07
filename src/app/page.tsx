@@ -28,10 +28,10 @@ export default function Home() {
         <div className="grid justify-center">
           <Image
             className="pt-8"
-            src={"/img_desktop.svg"}
+            src={"/img_home.svg"}
             alt="img_home"
-            width={"400"}
-            height={"400"}
+            width={"500"}
+            height={"300"}
           />
         </div>
       </div>

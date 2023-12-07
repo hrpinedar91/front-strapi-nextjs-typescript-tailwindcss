@@ -22,8 +22,8 @@ const navLinks = [
     text: "Blog",
   },
   {
-    href: "/store",
-    text: "Store",
+    href: "/productos",
+    text: "Productos",
   },
   {
     href: "/contacto",
@@ -34,9 +34,13 @@ const navLinks = [
     text: "Fallas",
   },
   {
-    href: "/cart",
-    text: "Cart",
+    href: "/nosotros",
+    text: "Nosotros",
   },
+  // {
+  //   href: "/cart",
+  //   text: "Cart",
+  // },
 ];
 
 const Header = () => {
